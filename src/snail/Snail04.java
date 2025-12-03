@@ -38,44 +38,75 @@ public class Snail04 {
         // 3 -> 4 추가
         arr[0][3] = input;
         input++;
-
-
-        arr[1][3] = input;
+        // 4 -> 5 추가
+        arr[0][4] = input;
         input++;
-        arr[2][3] = input;
+
+
+        arr[1][4] = input;
+        input++;
+        arr[2][4] = input;
         input++;
         // 3 -> 4 추가
-        arr[3][3] = input;
+        arr[3][4] = input;
+        input++;
+        // 4 -> 5 추가
+        arr[4][4] = input;
         input++;
 
 
-        arr[3][2] = input;
+
+        arr[4][3] = input;
         input++;
-        arr[3][1] = input;
+        arr[4][2] = input;
         input++;
         // 3->4 추가
+        arr[4][1] = input;
+        input++;
+        // 4->5 추가
+        arr[4][0] = input;
+        input++;
+
+
         arr[3][0] = input;
         input++;
-
-
+        // 3->4 추가
         arr[2][0] = input;
         input++;
-        // 3->4 추가
+        // 4->5 추가
         arr[1][0] = input;
         input++;
+
 
         arr[1][1] = input;
         input++;
         // 3->4 추가
         arr[1][2] = input;
         input++;
-
-        // 3->4 추가
-        arr[2][2] = input;
+        // 4->5 추가
+        arr[1][3] = input;
         input++;
 
         // 3->4 추가
+        arr[2][3] = input;
+        input++;
+        // 4->5 추가
+        arr[3][3] = input;
+        input++;
+
+        // 3->4 추가
+        arr[3][2] = input;
+        input++;
+        // 4->5 추가
+        arr[3][1] = input;
+        input++;
+
+        // 4->5 추가
         arr[2][1] = input;
+        input++;
+
+        // 4->5 추가
+        arr[2][2] = input;
         input++;
 /**
  * 배열 확인 하기

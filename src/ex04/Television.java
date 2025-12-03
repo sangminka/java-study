@@ -5,6 +5,18 @@ public class Television {
     int volume;
     boolean onOff;
 
+    Television(int c,int v, boolean o){
+        channel = c;
+        volume =v;
+        onOff = o;
+
+    }
+
+    Television(){}
+
+    void print(){
+        System.out.println("채널은 " + channel + "이고 볼륨은 " + volume + " 입니다.");
+    }
     public static void main(String[] args) {
         Television myTv =new Television();
         myTv.channel = 7;
