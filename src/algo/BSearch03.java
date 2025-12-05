@@ -1,62 +1,37 @@
 package algo;
 
+
 import java.util.Arrays;
 
-
-// 10 찾기
 public class BSearch03 {
-    public static void main(String[] args) {
-        int[] arr= {10, 4, 1, 2, 3, 0, 11};
+
+    static void main() {
+
+        int[] arr = {0,1,2,9,8,7,6,5,4,10}; // 9개 -> 3회안에 끝남
 
 
-        // 1. 정렬
-        Arrays.sort(arr);//0, 1, 2, 3, 4, 10, 11
+        Arrays.sort(arr); //{0,1,2,3,4,5,6,7,8,9,10}
 
-        int target = 10;
-        int start = 0;
-        int end = arr.length-1;
-        int mid =(end +start)/2;  // 3
+        int target = 6;
+        int startIndex = 0;
+        int endIndex = 10;
+        int mid = (endIndex - startIndex)/2 + startIndex;
 
 
-        // 2. 검색
-        /**
-         * target이 가운데 있을때
-         */
-        if(target == arr[mid]){ //0, 1, 2, [3], 4, 10, 11
-            System.out.println("arr["+mid+"]번지에 "+ target+ " 이 있습니다.");
-            return;
+        if(target == arr[mid]){
+            System.out.println(target + "을 찾았습니다(1라운드): " + arr[mid]);
         }
 
-        if (target > arr[mid]){ //0, 1, 2, 3, 4, [10], 11
-            start = mid +1;
-            mid = (end +start)/2;
+        startIndex = mid + 1;
+        mid = (endIndex - startIndex)/2 + startIndex; //8번지
+        if(target == arr[mid]){
+            System.out.println(target + "을 찾았습니다(2라운드): " + arr[mid]);
         }
 
-        if (target < arr[mid]){ //0, [1], 2, 3, 4, [10], 11
-            end = mid -1;
-            mid = (end +start)/2;
+        endIndex = mid -1;
+        mid = (endIndex - startIndex)/2 + startIndex; // 6번지
+        if(target == arr[mid]){
+            System.out.println(target + "을 찾았습니다(3라운드): " + arr[mid]);
         }
-
-        if(target == arr[mid]){ //0, 1, 2, 3, 4, [10], 11
-            System.out.println("arr["+mid+"]번지에 "+ target+ " 이 있습니다.");
-            return;
-        }
-
-        if (target > arr[mid]){ //0, 1, 2, 3, 4, [10], 11
-            start = mid +1;
-            mid = (end +start)/2;
-        }
-
-        if (target < arr[mid]){ //0, [1], 2, 3, 4, [10], 11
-            end = mid -1;
-            mid = (end +start)/2;
-        }
-        if(target == arr[mid]){ //0, 1, 2, 3, 4, 10, [11]
-            System.out.println("arr["+mid+"]번지에 "+ target+ " 이 있습니다.");
-            return;
-        }
-
-
-        System.out.println("main 끝");
     }
 }
