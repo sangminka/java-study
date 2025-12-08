@@ -35,7 +35,7 @@ class Sonata extends Car {
 
 public class ExMeh01 {
     public static void main(String[] args) {
-        Morning a1 = new Morning(); // [Morning(V), Car]
+        Car a1 = new Morning(); // [Morning(V), Car]
         a1.run();
 
 

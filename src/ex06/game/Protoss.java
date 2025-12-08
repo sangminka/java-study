@@ -1,8 +1,6 @@
 package ex06.game;
 
 abstract public class Protoss {
-    private int hp;
-    private int attack;
 
     abstract public int getAttack();
 
