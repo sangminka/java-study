@@ -24,6 +24,8 @@ public class LottoApp02 {
             System.out.print(ball[i] +  " ");
         }
         System.out.println(" ");
+        
+        // 볼 추첨
         while (count < 6){
             n= r.nextInt(45);
 
@@ -32,15 +34,13 @@ public class LottoApp02 {
                 ball[n] = 0;
             }
         }
-
-
+        
         // Ball 체크
         System.out.println("현재 볼 상태");
         for (int i = 0; i < ball.length; i++) {
             System.out.print(ball[i] +  " ");
         }
         System.out.println(" ");
-
 
         // 당첨 번호
         System.out.println("추첨 번호");
